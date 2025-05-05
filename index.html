@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PakWheels - Buy & Sell Cars, Bikes, Auto Parts & Accessories in Pakistan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <style>
+    /* Custom styles to match PakWheels */
+    body { font-family: 'Roboto', sans-serif; }
+    .bg-hero { background-image: url('https://via.placeholder.com/1920x600?text=Hero+Banner'); background-size: cover; background-position: center; }
+    .search-tabs { background: linear-gradient(to bottom, #003087, #0052cc); }
+    .search-tabs button.active { background: #ffffff; color: #003087; }
+    .car-card:hover { transform: translateY(-5px); transition: transform 0.3s; }
+  </style>
+</head>
+<body class="text-gray-800">
+  <!-- Top Bar -->
+  <div class="bg-blue-900 text-white text-sm py-2">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-blue-300">Download App</a>
+        <a href="#" class="hover:text-blue-300">Sell Your Car</a>
+      </div>
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-blue-300">Sign In</a>
+        <a href="#" class="hover:text-blue-300">Register</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <img src="pw-logo-new-1.png" alt="PakWheels Logo" class="h-12">
+        <nav class="hidden md:flex space-x-6 text-sm font-medium">
+          <a href="#" class="hover:text-blue-600">Used Cars</a>
+          <a href="#" class="hover:text-blue-600">New Cars</a>
+          <a href="#" class="hover:text-blue-600">Bikes</a>
+          <a href="#" class="hover:text-blue-600">Auto Parts & Accessories</a>
+          <a href="#" class="hover:text-blue-600">Cool Rides</a>
+          <a href="#" class="hover:text-blue-600">Forums</a>
+          <a href="#" class="hover:text-blue-600">Blog</a>
+          <a href="#" class="hover:text-blue-600">Autostore</a>
+        </nav>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden text-blue-900">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow">
+      <a href="#" class="block px-4 py-3 hover:bg-gray-100">Used Cars</a>
+      <a href="#" class="block px-4 py-3 hover:bg-gray-100">New Cars</a>
+      <a href="#" class="block px-4 py-3 hover:bg-gray-100">Bikes</a>
+      <a href="#" class="block px-4 py-3 hover:bg-gray-100">Auto Parts & Accessories</a>
+      <a href="#" class="block px-4 py-3 hover:bg-gray-100">Cool Rides</a>
+      <a href="#" class="block px-4 py-3 hover:bg-gray-100">Forums</a>
+      <a href="#" class="block px-4 py-3 hover:bg-gray-100">Blog</a>
+      <a href="#" class="block px-4 py-3 hover:bg-gray-100">Autostore</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-hero py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+        <div class="search-tabs flex text-white">
+          <button class="flex-1 py-3 text-center font-semibold active">Used Cars</button>
+          <button class="flex-1 py-3 text-center font-semibold">New Cars</button>
+          <button class="flex-1 py-3 text-center font-semibold">Bikes</button>
+        </div>
+        <form class="p-6 grid grid-cols-1 md:grid-cols-5 gap-4">
+          <select class="border p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-600">
+            <option>Select City</option>
+            <option>Lahore</option>
+            <option>Karachi</option>
+            <option>Islamabad</option>
+          </select>
+          <select class="border p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-600">
+            <option>Select Make</option>
+            <option>Toyota</option>
+            <option>Honda</option>
+            <option>Suzuki</option>
+          </select>
+          <select class="border p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-600">
+            <option>Select Model</option>
+            <option>Corolla</option>
+            <option>Civic</option>
+            <option>Mehran</option>
+          </select>
+          <input type="text" placeholder="Price Range (PKR)" class="border p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-600">
+          <button type="submit" class="bg-blue-600 text-white p-3 rounded hover:bg-blue-700">Find Cars</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Listings -->
+  <section class="container mx-auto px-4 py-12">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-2xl font-bold">Featured Used Cars For Sale</h2>
+      <a href="#" class="text-blue-600 hover:underline">View All</a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="car-card border rounded-lg overflow-hidden shadow-lg">
+        <img src="Slide_hyundai-elantra-gls-9-2021-120072190.webp" alt="Car 1" class="w-full">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">Hyundai Elantra 2021</h3>
+          <p class="text-blue-600 font-bold">PKR 5,700,000</p>
+          <p class="text-sm text-gray-500">Lahore | 2021 | 25,000 km</p>
+        </div>
+      </div>
+      <div class="car-card border rounded-lg overflow-hidden shadow-lg">
+        <img src="Slide_honda-n-wgn-custom-g-l-package-2019-121116899.webp" alt="Car 2" class="w-full">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">Honda N Wgn 2019</h3>
+          <p class="text-blue-600 font-bold">PKR 3,235,000</p>
+          <p class="text-sm text-gray-500">Lahore| 2020 | 30,000 km</p>
+        </div>
+      </div>
+      <div class="car-card border rounded-lg overflow-hidden shadow-lg">
+        <img src="Slide_toyota-prado-2002-119061690 (1).webp" alt="Car 3" class="w-full">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">Toyota Prado 2002</h3>
+          <p class="text-blue-600 font-bold">PKR 3,680,000</p>
+          <p class="text-sm text-gray-500">Peshawar| 2022 | 15,000 km</p>
+        </div>
+      </div>
+      <div class="car-card border rounded-lg overflow-hidden shadow-lg">
+        <img src="Slide_kia-sportage-alpha-2-2021-120242945.webp" alt="Car 4" class="w-full">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">KIA Sportage 2021</h3>
+          <p class="text-blue-600 font-bold">PKR 6,300,000</p>
+          <p class="text-sm text-gray-500">Lahore| 2021 | 20,000 km</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Cars Section -->
+  <section class="bg-gray-100 py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-bold">Explore New Cars</h2>
+        <a href="#" class="text-blue-600 hover:underline">View All</a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="border rounded-lg overflow-hidden shadow-lg">
+          <img src="Corolla-X-Cars-Cropped-Pictures-for-Website (1).jpg" alt="New Car 1" class="w-full">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Toyota Corlla</h3>
+            <p class="text-blue-600 font-bold">PKR 59.7 - 75.5 lacs</p>
+          </div>
+        </div>
+        <div class="border rounded-lg overflow-hidden shadow-lg">
+          <img src="Suzuki Alto (2).jpg" alt="New Car 2" class="w-full">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Suzuki Alto</h3>
+            <p class="text-blue-600 font-bold">PKR 23.3 - 31.4 lacs</p>
+          </div>
+        </div>
+        <div class="border rounded-lg overflow-hidden shadow-lg">
+          <img src="Slide_kia-sorento-3-5-fwd-2022-117318124 (1).webp" alt="New Car 3" class="w-full">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">KIA Sorento 2022</h3>
+            <p class="text-blue-600 font-bold">PKR 8,400,000</p>
+          </div>
+        </div>
+        <div class="border rounded-lg overflow-hidden shadow-lg">
+          <img src="Honda City (2).jpg" alt="New Car 4" class="w-full">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Honda City</h3>
+            <p class="text-blue-600 font-bold">PKR 46.5 - 58.5 lacs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bikes Section -->
+  <section class="container mx-auto px-4 py-12">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-2xl font-bold">Bikes New Bikes </h2>
+      <a href="#" class="text-blue-600 hover:underline">View All</a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="border rounded-lg overflow-hidden shadow-lg">
+        <img src="Honda CD70(4).jpg" alt="Bike 1" class="w-full">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">Honda CD 70</h3>
+          <p class="text-blue-600 font-bold">PKR 157,900</p>
+          <p class="text-sm text-gray-500">Lahore | 2023</p>
+        </div>
+      </div>
+      <div class="border rounded-lg overflow-hidden shadow-lg">
+        <img src="Honda CG 125(4).jpg" alt="Bike 2" class="w-full">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">Honda CG 125</h3>
+          <p class="text-blue-600 font-bold">PKR 234,900</p>
+          <p class="text-sm text-gray-500">Lahore | 2022</p>
+        </div>
+      </div>
+      <div class="border rounded-lg overflow-hidden shadow-lg">
+        <img src="Honda CG 150 (4).jpg" alt="Bike 3" class="w-full">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">Suzuki GS 150</h3>
+          <p class="text-blue-600 font-bold">PKR 389,000</p>
+          <p class="text-sm text-gray-500">Islamabad | 2021</p>
+        </div>
+      </div>
+      <div class="border rounded-lg overflow-hidden shadow-lg">
+        <img src="YAMAHA YBR (4).jpg" alt="Bike 4" class="w-full">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">Yamaha YBR 125</h3>
+          <p class="text-blue-600 font-bold">PKR 466,000</p>
+          <p class="text-sm text-gray-500">Lahore | 2023</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Auto Parts & Accessories -->
+  <section class="bg-gray-100 py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-bold">Auto Parts & Accessories</h2>
+        <a href="#" class="text-blue-600 hover:underline">View All</a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="border rounded-lg overflow-hidden shadow-lg">
+          <img src="batteries-0a698331b93f59e8720442ecf0a86b7b.png" alt="Part 1" class="w-full">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Car Battery</h3>
+            <p class="text-blue-600 font-bold">PKR 25,000</p>
+          </div>
+        </div>
+        <div class="border rounded-lg overflow-hidden shadow-lg">
+          <img src="alloy-wheels-b69771aeef0ed4632ffb09a774ed6dc2.png" alt="Part 2" class="w-full">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Alloy Rims</h3>
+            <p class="text-blue-600 font-bold">PKR 50,000</p>
+          </div>
+        </div>
+        <div class="border rounded-lg overflow-hidden shadow-lg">
+          <img src="usb-car-charger-79e64d90c9ee21e29c264a5377fc733b.png" alt="Part 3" class="w-full">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Car Charger</h3>
+            <p class="text-blue-600 font-bold">PKR 4,000</p>
+          </div>
+        </div>
+        <div class="border rounded-lg overflow-hidden shadow-lg">
+          <img src="complete-engines-9911715ba00958499eff5621e88ac15e.png" alt="Part 4" class="w-full">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Car Engine sale</h3>
+            <p class="text-blue-600 font-bold">PKR 700,000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div>
+          <h4 class="font-bold text-lg mb-4">PakWheels.com</h4>
+          <ul class="text-sm space-y-2">
+            <li><a href="#" class="hover:text-blue-300">About Us</a></li>
+            <li><a href="#" class="hover:text-blue-300">Contact Us</a></li>
+            <li><a href="#" class="hover:text-blue-300">Advertise With Us</a></li>
+            <li><a href="#" class="hover:text-blue-300">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Buy Vehicle</h4>
+          <ul class="text-sm space-y-2">
+            <li><a href="#" class="hover:text-blue-300">Used Cars</a></li>
+            <li><a href="#" class="hover:text-blue-300">New Cars</a></li>
+            <li><a href="#" class="hover:text-blue-300">Bikes</a></li>
+            <li><a href="#" class="hover:text-blue-300">Auto Parts & Accessories</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Sell Vehicle</h4>
+          <ul class="text-sm space-y-2">
+            <li><a href="#" class="hover:text-blue-300">Sell Your Car</a></li>
+            <li><a href="#" class="hover:text-blue-300">Sell Your Bike</a></li>
+            <li><a href="#" class="hover:text-blue-300">Post an Ad</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Community</h4>
+          <ul class="text-sm space-y-2">
+            <li><a href="#" class="hover:text-blue-300">Forums</a></li>
+            <li><a href="#" class="hover:text-blue-300">Blog</a></li>
+            <li><a href="#" class="hover:text-blue-300">Cool Rides</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Connect With Us</h4>
+          <div class="flex space-x-4 mb-4">
+            <a href="#" class="hover:text-blue-300"><i class="fab fa-facebook-f text-xl"></i></a>
+            <a href="#" class="hover:text-blue-300"><i class="fab fa-twitter text-xl"></i></a>
+            <a href="#" class="hover:text-blue-300"><i class="fab fa-instagram text-xl"></i></a>
+            <a href="#" class="hover:text-blue-300"><i class="fab fa-youtube text-xl"></i></a>
+          </div>
+          <p class="text-sm">Download our app:</p>
+          <div class="flex space-x-2">
+            <img src="app-store-badge-47a3fa71b3442ad5181388d9060d4478.svg" alt="App Store">
+            <img src="https://via.placeholder.com/120x40?text=Google+Play" alt="Google Play">
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 pt-8 border-t border-gray-700 text-center text-sm">
+        <p>© 2003 - 2025 PakWheels.com. All Rights Reserved.</p>
+        <p class="mt-2">
+          <a href="#" class="hover:text-blue-300">Terms of Service</a> | 
+          <a href="#" class="hover:text-blue-300">Privacy Policy</a>
+        </p>
+      </div>
+    </div>
+    
+  </footer>
+
+  <!-- JavaScript for Mobile Menu and Search Tabs -->
+  <script>
+    // Mobile Menu Toggle
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // Search Tabs Functionality
+    document.querySelectorAll('.search-tabs button').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.search-tabs button').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
